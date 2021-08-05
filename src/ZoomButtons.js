@@ -19,13 +19,13 @@ const ZoomOutButton = ({ disabled, onClick }) => (
 );
 
 const ZoomInButton = ({ disabled, onClick }) => (
-    <button className='iconButton' style={{ margin: '10px', marginLeft: '0px' }} onClick={onClick} disabled={disabled}>
+    <button className='iconButton zoom-button' style={{ margin: '10px', marginLeft: '0px' }} onClick={onClick} disabled={disabled}>
         <FontAwesomeIcon icon={faPlus} fixedWidth />
     </button>
 );
 
 const ZoomButtons = ({scale, minScale, maxScale, onZoomInClick, onZoomOutClick}) => (
-    <div style={containerStyle}>
+    <div className='zoom-container' style={containerStyle}>
         <ZoomOutButton onClick={onZoomOutClick} disabled={scale <= minScale} />
         <ZoomInButton onClick={onZoomInClick} disabled={scale >= maxScale} />
     </div>

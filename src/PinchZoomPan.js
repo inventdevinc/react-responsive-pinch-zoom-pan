@@ -511,7 +511,7 @@ export default class PinchZoomPan extends React.Component {
         };
 
         return (
-            <div style={containerStyle}>
+            <div className="pinch-zoom-pan" style={containerStyle}>
                 {zoomButtons && this.isImageReady && this.isTransformInitialized && <ZoomButtons 
                     scale={scale} 
                     minScale={getMinScale(this.state, this.props)} 
